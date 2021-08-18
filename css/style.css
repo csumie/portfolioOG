@@ -25,7 +25,7 @@
   width: 100%;
   height: 100%;
   z-index: 99999;
-  background: #fff;
+  background: #000;
   overflow: hidden;
 }
 
@@ -375,7 +375,8 @@ ul li.more,
   left: 0;
   right: 0;
   z-index: 999;
-  padding-top: 20px;
+  padding: 15px;
+  background-color: #11100e;
   /*
   padding-bottom: 10px */
 }
@@ -399,7 +400,7 @@ ul li.more,
 
 .main-menu.navbar .nav>li ul.sub-menu {
   position: absolute;
-  background: #1e1e1e;
+  background: #11100e;
   width: 150px;
   top: 120%;
   top: calc(100% + 60px);
@@ -479,7 +480,7 @@ ul li.more,
   top: 0;
   left: 0;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 10); */
   margin: 0;
   animation-name: menu_sticky;
   animation-duration: 0.70s;
@@ -487,8 +488,10 @@ ul li.more,
 }
 
 .main-header.fixed .logo {
-  margin-top: -8px;
-  margin-bottom: 8px;
+  /* margin-top: -8px;
+  margin-bottom: 8px; */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /*----------------*/
@@ -558,7 +561,7 @@ ul li.more,
 
 #about .about-content a.more:hover,
 #about .about-content:hover .icon {
-  color: #1e1e1e;
+  color: #11100e;
 }
 
 .aboutMe {
@@ -567,12 +570,18 @@ ul li.more,
   padding-right: 10px;
 }
 
+.aboutMe p {
+text-align: justify;
+text-justify: inter-word;
+
+}
+
 /*------------------------*/
 /* --- Skills Section --- */
 /*------------------------*/
 
 #skills-section {
-  background: #1e1e1e;
+  background: #11100e;
   padding-bottom: 80px;
 }
 
@@ -623,7 +632,7 @@ ul li.more,
   color: #808489;
   width: 80px;
   margin: 0 auto;
-  background: #1e1e1e;
+  background: #11100e;
 }
 
 #skills-section .skills-content .icon-heading a {
@@ -677,8 +686,8 @@ ul li.more,
   border-width: 1px;
 }
 
-/*------------------*/
-/* --- Projects --- */
+  /*------------------*/
+ /* --- Projects --- */
 /*------------------*/
 
 #projects-section .projects-wrapper {
@@ -778,14 +787,17 @@ ul li.more,
 }
 
 #projects-section .projects-wrapper .projects-content .project-name h6 {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   color: #696f78;
-  margin-top: 12px;
+  margin-top: 16px;
+  font-size: 11px;
 }
 
 #projects-section .projects-wrapper .projects-content .project-name p {
   color: #373a3f;
   margin: 5px 0 8px 0;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
 #projects-section .projects-wrapper .projects-content:hover .project-name h6,
@@ -837,22 +849,22 @@ li:nth-child(5) a {
 
 #projects-section .projects-wrapper .projects-content .project-name ul li:nth-child(1) a:hover,
 li:nth-child(2) a:hover {
-  background: #1e1e1e;
+  background: #11100e;
 }
 
 #projects-section .projects-wrapper .projects-content .project-name ul li:nth-child(2) a:hover,
 li:nth-child(3) a:hover {
-  background: #1e1e1e;
+  background: #11100e;
 }
 
 #projects-section .projects-wrapper .projects-content .project-name ul li:nth-child(3) a:hover,
 li:nth-child(4) a:hover {
-  background: #1e1e1e;
+  background: #11100e;
 }
 
 #projects-section .projects-wrapper .projects-content .project-name ul li:nth-child(4) a:hover,
 li:nth-child(5) a:hover {
-  background: #1e1e1e;
+  background: #11100e;
 }
 
 #projects-section .projects-wrapper .projects-content .project-name ul li a:hover {
@@ -879,8 +891,8 @@ li:nth-child(5) a:hover {
   transform: translate3D(0, 0, 0);
 }
 
-/*-------------------------*/
-/* --- Collabo Contact --- */
+  /*-------------------------*/
+ /* --- Collabo Contact --- */
 /*-------------------------*/
 
 .cognito a {
@@ -894,12 +906,28 @@ li:nth-child(5) a:hover {
 }
 
 .cognito .c-html * {
-    color: #fff;
-    font-size: 22px;
+    color: #000;
+    font-size: 28px;
+    margin: 3%;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 2s ease-in both;
+  }
+
+.cognito .c-forms-form .c-forms-confirmation-message {
+  margin: 50px 0 0 0;
+  color: #000;
+}
+
+.c-forms-form {
+    overflow: visible;
+    line-height: 1.3em;
+    position: relative;
+    padding: 3%;
 }
 
 .contact-section {
-  background-color: #1e1e1e;
+  background-color: #11100e;
   padding: 55px 0 55px 0;
 }
 
@@ -990,13 +1018,61 @@ h3 {
 }
 
 
-/*----------------*/
-/* --- Footer --- */
+  /*------------------*/
+ /* --- Chevron ---- */
+/*------------------*/
+
+/* .chevron {
+  position: relative;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 50px;
+  height: 50px;
+  width: 100%;
+}
+.chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: #11100e;
+  transform: skew(0deg, 6deg);
+}
+.chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #11100e;
+  transform: skew(0deg, -6deg);
+} */
+
+.chevron {
+  /* padding-bottom: 100px; */
+  width: 100%;
+  /* min-height: 100px; */
+}
+.second {
+  width: 0px;
+  margin-top: -50px;
+  border-top: 50px solid transparent;
+  border-right: 50vw solid white;
+  border-left: 50vw solid white;
+  border-bottom: 50px solid white;
+}
+
+
+  /*----------------*/
+ /* --- Footer --- */
 /*----------------*/
 
 footer {
   /* margin: 100px 0 0 0; */
-  background: #1e1e1e;
+  background: #11100e;
   padding: 60px 0 25px 0;
   text-align: center;
 }
@@ -1029,11 +1105,11 @@ footer ul li:nth-child(2) a {
 }
 
 footer ul li:nth-child(1) a:hover {
-  background: #1e1e1e;
+  background: #11100e;
 }
 
 footer ul li:nth-child(2) a:hover {
-  background: #1e1e1e;
+  background: #11100e;
 }
 
 footer ul li a:hover {

@@ -1598,20 +1598,35 @@ pre code {
 }
 @media (min-width: 768px) {
   .container-project {
-    width: 100%;
+    width: 90%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
-@media (min-width: 1200px) {
+
+@media (max-width: 991px) {
+  .container {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1199px) {
   .container {
     width: 1170px;
   }
@@ -4233,6 +4248,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
+  padding-top: 10px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -4269,7 +4285,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     display: block !important;
     height: auto !important;
     padding-bottom: 0;
-    /* padding-top: 8px; */
+    padding-top: auto !important;
     overflow: visible !important;
   }
   .navbar-collapse.in {
